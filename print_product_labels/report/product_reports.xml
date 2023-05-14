@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="report_product_label" model="ir.actions.report">
+            <field name="name">Etichetta custom (PDF)</field>
+            <field name="model">product.product</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">print_product_labels.report_productlabel_custom</field>
+            <field name="report_file">print_product_labels.report_productlabel_custom</field>
+            <field name="print_report_name">'Etichetta custom - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="product.model_product_product"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="print_product_labels.paperformat_38x100"/>
+        </record>
+    </data>
+</odoo>
